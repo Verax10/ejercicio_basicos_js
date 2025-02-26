@@ -1,0 +1,18 @@
+
+function findLongestWord(stringList) {
+  let longestWord = stringList[0]; // Comienza con el primer string en el array
+
+  for (let i = 1; i < stringList.length; i++) {
+    // Compara la longitud de la palabra actual con la longitud de longestWord
+    if (stringList[i].length > longestWord.length) {
+      longestWord = stringList[i]; // Actualiza longestWord si encontramos una palabra más larga
+    }
+  }
+
+  return longestWord; // Devuelve la palabra más larga
+}
+
+// Array de prueba
+const avengers = ['Hulk', 'Thor', 'Iron Man', 'Captain A.', 'Spiderman', 'Captain M.'];
+
+console.log(findLongestWord(avengers)); // Devuelve 'Iron Man'
